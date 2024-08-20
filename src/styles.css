@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(./app/css/Reset.css);
+@import url(./app/css/Roboto.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+}

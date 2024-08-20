@@ -1,3 +1,7 @@
-<p>layout-page works!</p>
-
-<router-outlet></router-outlet>
+<div class="grid grid-cols-1 md:grid-cols-[40%_60%] min-h-[100vh]">
+	<div class="bg-heroes-50">
+		<router-outlet></router-outlet>
+	</div>
+	<div class="auth-bg"></div>
+	<!--TODO: Condicional para la imagen de fondo en responsive-->
+</div>
