@@ -1,0 +1,11 @@
+.sidenavAnimation {
+	transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.sidenavContainerAnimation {
+	transition: transform 0.01s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.transparentBlack {
+	background-color: rgb(0, 0, 0, 0.75);
+}
