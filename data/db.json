@@ -1,0 +1,450 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"usuario": "hatashi199",
+			"nombre": "Alejandro Mariño",
+			"email": "hatashi199@example.com"
+		}
+	],
+	"heroes": [
+		{
+			"id": "dc-superman",
+			"superhero": "Superman",
+			"alter_ego": "Clark Kent",
+			"publisher": "DC Comics",
+			"powers": [
+				"Super strength",
+				"Flight",
+				"Invulnerability",
+				"Heat vision"
+			],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Leader"
+			},
+			"first_appearance": {
+				"comic": "Action Comics #1",
+				"year": 1938
+			},
+			"isAlien": true,
+			"heightInMeters": 1.91,
+			"description": "Superman, nacido en el planeta Krypton como Kal-El, fue enviado a la Tierra como un bebé para escapar de la destrucción de su mundo. Criado por una familia de granjeros en Smallville, Kansas, Clark Kent descubrió sus increíbles poderes a una edad temprana. Al crecer, adoptó la identidad de Superman y se convirtió en el protector de la Tierra, luchando por la verdad, la justicia y el estilo de vida americano."
+		},
+		{
+			"id": "dc-batman",
+			"superhero": "Batman",
+			"alter_ego": "Bruce Wayne",
+			"publisher": "DC Comics",
+			"powers": [],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "Detective Comics #27",
+				"year": 1939
+			},
+			"isAlien": false,
+			"heightInMeters": 1.88,
+			"description": "Batman, también conocido como el Caballero Oscuro, es la identidad secreta de Bruce Wayne, un multimillonario de Gotham City que, tras presenciar el asesinato de sus padres, juró combatir el crimen. Utilizando su intelecto, habilidades de combate y una vasta colección de tecnología avanzada, Batman se enfrenta a los criminales más peligrosos de Gotham."
+		},
+		{
+			"id": "dc-wonderwoman",
+			"superhero": "Wonder Woman",
+			"alter_ego": "Diana Prince",
+			"publisher": "DC Comics",
+			"powers": [
+				"Super strength",
+				"Flight",
+				"Combat skills",
+				"Lasso of Truth"
+			],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "All Star Comics #8",
+				"year": 1941
+			},
+			"isAlien": false,
+			"heightInMeters": 1.83,
+			"description": "Wonder Woman es una princesa amazona, hija de la reina Hippolyta y creada a partir de arcilla y traída a la vida por los dioses. Como embajadora de Themyscira, lleva al mundo de los hombres un mensaje de paz y lucha contra las injusticias. Es una guerrera excepcional, con habilidades sobrehumanas, un lazo de la verdad, y brazaletes inquebrantables."
+		},
+		{
+			"id": "dc-theflash",
+			"superhero": "The Flash",
+			"alter_ego": "Barry Allen",
+			"publisher": "DC Comics",
+			"powers": ["Super speed", "Time travel", "Enhanced reflexes"],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "Showcase #4",
+				"year": 1956
+			},
+			"isAlien": false,
+			"heightInMeters": 1.83,
+			"canTimeTravel": true,
+			"description": "Barry Allen, conocido como The Flash, es el hombre más rápido del mundo. Después de ser golpeado por un rayo y bañado en productos químicos, Barry obtuvo la capacidad de moverse a velocidades increíbles. Como The Flash, usa su velocidad para proteger a los inocentes, viajar a través del tiempo y explorar el vasto multiverso."
+		},
+		{
+			"id": "dc-aquaman",
+			"superhero": "Aquaman",
+			"alter_ego": "Arthur Curry",
+			"publisher": "DC Comics",
+			"powers": [
+				"Underwater breathing",
+				"Super strength",
+				"Telepathy with sea life"
+			],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "More Fun Comics #73",
+				"year": 1941
+			},
+			"isAlien": false,
+			"heightInMeters": 1.85,
+			"description": "Aquaman, el rey de Atlantis, es mitad humano y mitad atlante. Es un poderoso guerrero con la habilidad de comunicarse telepáticamente con la vida marina."
+		},
+		{
+			"id": "dc-greenlantern",
+			"superhero": "Green Lantern",
+			"alter_ego": "Hal Jordan",
+			"publisher": "DC Comics",
+			"powers": ["Power ring", "Energy constructs", "Flight"],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "All-American Comics #16",
+				"year": 1940
+			},
+			"isAlien": false,
+			"heightInMeters": 1.88,
+			"description": "Hal Jordan, un piloto de pruebas, fue elegido por un anillo de poder para unirse a los Green Lantern Corps, una fuerza intergaláctica que mantiene la paz en el universo."
+		},
+		{
+			"id": "dc-cyborg",
+			"superhero": "Cyborg",
+			"alter_ego": "Victor Stone",
+			"publisher": "DC Comics",
+			"powers": ["Technopathy", "Super strength", "Advanced robotics"],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "DC Comics Presents #26",
+				"year": 1980
+			},
+			"isAlien": false,
+			"heightInMeters": 1.98,
+			"description": "Victor Stone, tras un accidente que lo dejó gravemente herido, fue reconstruido con tecnología avanzada, convirtiéndose en Cyborg, un héroe con capacidades tecnológicas extraordinarias."
+		},
+		{
+			"id": "dc-shazam",
+			"superhero": "Shazam",
+			"alter_ego": "Billy Batson",
+			"publisher": "DC Comics",
+			"powers": ["Super strength", "Flight", "Magic"],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "Whiz Comics #2",
+				"year": 1940
+			},
+			"isAlien": false,
+			"heightInMeters": 1.83,
+			"description": "Billy Batson es un niño que, al pronunciar la palabra mágica 'Shazam', se transforma en un superhéroe adulto con los poderes de dioses antiguos."
+		},
+		{
+			"id": "dc-martianmahunter",
+			"superhero": "Martian Manhunter",
+			"alter_ego": "J'onn J'onzz",
+			"publisher": "DC Comics",
+			"powers": [
+				"Shape-shifting",
+				"Telepathy",
+				"Super strength",
+				"Flight"
+			],
+			"affiliation": {
+				"team": "Justice League",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "Whiz Comics #2",
+				"year": 1940
+			},
+			"isAlien": true,
+			"heightInMeters": 1.91,
+			"description": "J'onn J'onzz es un marciano que llegó a la Tierra accidentalmente. Posee una amplia gama de habilidades, incluyendo la telepatía y la capacidad de cambiar de forma."
+		},
+		{
+			"id": "dc-raven",
+			"superhero": "Raven",
+			"alter_ego": "Rachel Roth",
+			"publisher": "DC Comics",
+			"powers": [
+				"Telekinesis",
+				"Telepathy",
+				"Soul-self",
+				"Darkness manipulation",
+				"Empathy"
+			],
+			"affiliation": {
+				"team": "Teen Titans",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "DC Comics Presents #26",
+				"year": 1980
+			},
+			"isAlien": false,
+			"heightInMeters": 1.7,
+			"description": "Raven, nacida como Rachel Roth, es la hija del demonio Trigon y una humana. Criada en la dimensión de Azarath, lucha constantemente por mantener su oscuridad interna bajo control. Como miembro de los Teen Titans, utiliza sus habilidades para combatir el mal, mientras busca la paz interior y la redención. Su poder más distintivo es el 'Soul-self', una manifestación astral de su alma que puede utilizar para múltiples propósitos, incluyendo el transporte, el combate y la protección."
+		},
+		{
+			"id": "marvel-spiderman",
+			"superhero": "Spider-Man",
+			"alter_ego": "Peter Parker",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Wall-crawling",
+				"Super strength",
+				"Spider-sense",
+				"Enhanced agility"
+			],
+			"affiliation": {
+				"team": "Avengers",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "Amazing Fantasy #15",
+				"year": 1962
+			},
+			"isAlien": false,
+			"heightInMeters": 1.78,
+			"description": "Peter Parker, un joven neoyorquino, obtuvo sus poderes tras ser mordido por una araña radioactiva. Como Spider-Man, lucha por proteger la ciudad de Nueva York."
+		},
+		{
+			"id": "marvel-ironman",
+			"superhero": "Iron Man",
+			"alter_ego": "Tony Stark",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Genius-level intellect",
+				"Powered armor suit",
+				"Energy repulsors",
+				"Flight"
+			],
+			"affiliation": {
+				"team": "Avengers",
+				"role": "Leader"
+			},
+			"first_appearance": {
+				"comic": "Tales of Suspense #39",
+				"year": 1963
+			},
+			"isAlien": false,
+			"heightInMeters": 1.85,
+			"description": "Tony Stark, un genio inventor y empresario, creó la armadura de Iron Man para salvar su vida. Usa su vasto intelecto y riqueza para proteger el mundo como Iron Man."
+		},
+		{
+			"id": "marvel-blackwidow",
+			"superhero": "Black Widow",
+			"alter_ego": "Natasha Romanoff",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Expert martial artist",
+				"Espionage",
+				"Enhanced agility",
+				"Tactical skills"
+			],
+			"affiliation": {
+				"team": "Avengers",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "Tales of Suspense #52",
+				"year": 1964
+			},
+			"isAlien": false,
+			"heightInMeters": 1.6,
+			"description": "Natasha Romanoff, conocida como Black Widow, es una espía y experta en artes marciales que trabajó para la KGB antes de unirse a S.H.I.E.L.D. y los Vengadores. Es conocida por sus habilidades en el combate y la infiltración."
+		},
+		{
+			"id": "marvel-scarletwitch",
+			"superhero": "Scarlet Witch",
+			"alter_ego": "Wanda Maximoff",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Reality manipulation",
+				"Telekinesis",
+				"Telepathy",
+				"Chaos magic"
+			],
+			"affiliation": {
+				"team": "Avengers",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "X-Men #4",
+				"year": 1964
+			},
+			"isAlien": false,
+			"heightInMeters": 1.7,
+			"description": "Wanda Maximoff, conocida como Scarlet Witch, posee el poder de manipular la realidad y la magia del caos. Su habilidad para alterar la realidad la convierte en una de las heroínas más poderosas y complejas del universo Marvel."
+		},
+		{
+			"id": "marvel-wolverine",
+			"superhero": "Wolverine",
+			"alter_ego": "Logan",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Regenerative healing",
+				"Enhanced senses",
+				"Adamantium skeleton",
+				"Claws"
+			],
+			"affiliation": {
+				"team": "X-Men",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "The Incredible Hulk #180",
+				"year": 1974
+			},
+			"isAlien": false,
+			"heightInMeters": 1.6,
+			"description": "Logan, conocido como Wolverine, tiene un esqueleto y garras recubiertos de adamantium, así como una capacidad de curación acelerada. Es uno de los miembros más feroces y resilientes de los X-Men."
+		},
+		{
+			"id": "marvel-daredevil",
+			"superhero": "Daredevil",
+			"alter_ego": "Matt Murdock",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Enhanced senses",
+				"Acrobatics",
+				"Martial arts",
+				"Radar sense"
+			],
+			"affiliation": {
+				"team": "Defenders",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "Daredevil #1",
+				"year": 1964
+			},
+			"isAlien": false,
+			"heightInMeters": 1.83,
+			"description": "Matt Murdock, un abogado ciego que adquirió sus habilidades a través de un accidente químico, usa sus sentidos agudizados y su entrenamiento en artes marciales para luchar contra el crimen como Daredevil. Aunque es ciego, su radar sense le permite percibir su entorno con una precisión sorprendente, convirtiéndolo en un formidable vigilante de Hell's Kitchen."
+		},
+		{
+			"id": "marvel-venom",
+			"superhero": "Venom",
+			"alter_ego": "Eddie Brock",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Symbiote bonding",
+				"Super strength",
+				"Shape-shifting",
+				"Web-slinging",
+				"Enhanced agility"
+			],
+			"affiliation": {
+				"team": "None",
+				"role": "Antihero"
+			},
+			"first_appearance": {
+				"comic": "The Amazing Spider-Man #300",
+				"year": 1988
+			},
+			"isAlien": true,
+			"heightInMeters": 2.2,
+			"description": "Eddie Brock, después de fusionarse con el simbiótico alienígena conocido como Venom, obtiene una variedad de poderes sobrehumanos. Venom es conocido por su fuerza descomunal, agilidad mejorada, y su capacidad para formar armas a partir del simbiótico. Aunque inicialmente un enemigo de Spider-Man, Venom ha evolucionado para convertirse en un antiheroe que lucha contra amenazas mayores."
+		},
+		{
+			"id": "marvel-storm",
+			"superhero": "Storm",
+			"alter_ego": "Ororo Munroe",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Weather manipulation",
+				"Flight",
+				"Lightning generation",
+				"Enhanced senses"
+			],
+			"affiliation": {
+				"team": "X-Men",
+				"role": "Leader"
+			},
+			"first_appearance": {
+				"comic": "Giant-Size X-Men #1",
+				"year": 1975
+			},
+			"isAlien": false,
+			"heightInMeters": 1.78,
+			"description": "Ororo Munroe, conocida como Storm, es una mutante con la habilidad de manipular el clima a su antojo. Su control sobre el tiempo le permite generar tormentas, rayos y controlar el viento. Además, posee la capacidad de volar. Como miembro y líder de los X-Men, utiliza sus poderes para luchar por la paz y la igualdad entre humanos y mutantes."
+		},
+		{
+			"id": "marvel-thanos",
+			"superhero": "Thanos",
+			"alter_ego": "Thanos",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Super strength",
+				"Immortality",
+				"Energy manipulation",
+				"Cosmic awareness",
+				"Telepathy"
+			],
+			"affiliation": {
+				"team": "None",
+				"role": "Villain"
+			},
+			"first_appearance": {
+				"comic": "The Invincible Iron Man #55",
+				"year": 1973
+			},
+			"isAlien": true,
+			"heightInMeters": 2.13,
+			"description": "Thanos es un titán de la raza alienígena conocida como los Titanes. Es un villano cósmico con habilidades sobrehumanas, incluyendo una fuerza inmensa y una longevidad prácticamente infinita. Thanos es conocido por su búsqueda del poder absoluto y su obsesión con el equilibrio del universo, que lo llevó a recolectar las Gemas del Infinito para obtener un poder ilimitado."
+		},
+		{
+			"id": "marvel-hulk",
+			"superhero": "Hulk",
+			"alter_ego": "Bruce Banner",
+			"publisher": "Marvel Comics",
+			"powers": [
+				"Super strength",
+				"Regenerative healing",
+				"Enhanced durability",
+				"Gamma radiation absorption"
+			],
+			"affiliation": {
+				"team": "Avengers",
+				"role": "Member"
+			},
+			"first_appearance": {
+				"comic": "The Incredible Hulk #1",
+				"year": 1962
+			},
+			"isAlien": false,
+			"heightInMeters": 2.44,
+			"description": "Bruce Banner, tras un accidente con rayos gamma, se transforma en el Hulk cuando experimenta una intensa ira. El Hulk posee una fuerza sobrehumana y una capacidad de curación acelerada que aumentan con su enojo. A pesar de su apariencia imponente y su naturaleza destructiva, Hulk es un miembro valioso de los Vengadores y un héroe en su propia forma."
+		}
+	]
+}
