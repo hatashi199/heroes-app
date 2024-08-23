@@ -1,1 +1,18 @@
-<p>hero-page works!</p>
+<ng-template #loader> Loader</ng-template>
+
+<div *ngIf="hero; else loader">
+	<div>
+		<img
+			[src]="hero | heroImgRoute"
+			[alt]="hero.id"
+		/>
+	</div>
+	<h2>{{ hero.superhero }}</h2>
+	<p>{{ hero.description }}</p>
+
+	<h3>Poderes:</h3>
+	<ul>
+		<li *ngFor="let power of hero.powers">{{ power }}</li>
+	</ul>
+	<button (click)="goBack()">Volver atrás</button>
+</div>

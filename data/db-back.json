@@ -168,7 +168,7 @@
 			"description": "Billy Batson es un niño que, al pronunciar la palabra mágica 'Shazam', se transforma en un superhéroe adulto con los poderes de dioses antiguos."
 		},
 		{
-			"id": "dc-martianmahunter",
+			"id": "dc-martianmanhunter",
 			"superhero": "Martian Manhunter",
 			"alter_ego": "J'onn J'onzz",
 			"publisher": "DC Comics",
@@ -353,28 +353,28 @@
 			"description": "Matt Murdock, un abogado ciego que adquirió sus habilidades a través de un accidente químico, usa sus sentidos agudizados y su entrenamiento en artes marciales para luchar contra el crimen como Daredevil. Aunque es ciego, su radar sense le permite percibir su entorno con una precisión sorprendente, convirtiéndolo en un formidable vigilante de Hell's Kitchen."
 		},
 		{
-			"id": "marvel-venom",
-			"superhero": "Venom",
-			"alter_ego": "Eddie Brock",
+			"id": "marvel-antman",
+			"superhero": "Ant-Man",
+			"alter_ego": "Scott Lang",
 			"publisher": "Marvel Comics",
 			"powers": [
-				"Symbiote bonding",
-				"Super strength",
-				"Shape-shifting",
-				"Web-slinging",
-				"Enhanced agility"
+				"Size manipulation",
+				"Super strength (when small)",
+				"Enhanced agility",
+				"Communication with insects",
+				"Genius-level intellect"
 			],
 			"affiliation": {
-				"team": "None",
-				"role": "Antihero"
+				"team": "Avengers",
+				"role": "Hero"
 			},
 			"first_appearance": {
-				"comic": "The Amazing Spider-Man #300",
-				"year": 1988
+				"comic": "The Avengers #181",
+				"year": 1979
 			},
-			"isAlien": true,
-			"heightInMeters": 2.2,
-			"description": "Eddie Brock, después de fusionarse con el simbiótico alienígena conocido como Venom, obtiene una variedad de poderes sobrehumanos. Venom es conocido por su fuerza descomunal, agilidad mejorada, y su capacidad para formar armas a partir del simbiótico. Aunque inicialmente un enemigo de Spider-Man, Venom ha evolucionado para convertirse en un antiheroe que lucha contra amenazas mayores."
+			"isAlien": false,
+			"heightInMeters": 1.8,
+			"description": "Scott Lang, a former thief turned hero, assumes the mantle of Ant-Man after stealing the suit from Hank Pym. The suit allows him to shrink to the size of an ant while retaining his human strength, or grow to giant proportions. He also has the ability to communicate with and control insects. Initially using his abilities for personal reasons, Scott eventually joins the Avengers and fights for the greater good."
 		},
 		{
 			"id": "marvel-storm",
@@ -400,28 +400,27 @@
 			"description": "Ororo Munroe, conocida como Storm, es una mutante con la habilidad de manipular el clima a su antojo. Su control sobre el tiempo le permite generar tormentas, rayos y controlar el viento. Además, posee la capacidad de volar. Como miembro y líder de los X-Men, utiliza sus poderes para luchar por la paz y la igualdad entre humanos y mutantes."
 		},
 		{
-			"id": "marvel-thanos",
-			"superhero": "Thanos",
-			"alter_ego": "Thanos",
+			"id": "marvel-cyclops",
+			"superhero": "Cyclops",
+			"alter_ego": "Scott Summers",
 			"publisher": "Marvel Comics",
 			"powers": [
-				"Super strength",
-				"Immortality",
-				"Energy manipulation",
-				"Cosmic awareness",
-				"Telepathy"
+				"Optic blasts",
+				"Expert tactician",
+				"Skilled hand-to-hand combatant",
+				"Enhanced spatial awareness"
 			],
 			"affiliation": {
-				"team": "None",
-				"role": "Villain"
+				"team": "X-Men",
+				"role": "Leader"
 			},
 			"first_appearance": {
-				"comic": "The Invincible Iron Man #55",
-				"year": 1973
+				"comic": "The X-Men #1",
+				"year": 1963
 			},
-			"isAlien": true,
-			"heightInMeters": 2.13,
-			"description": "Thanos es un titán de la raza alienígena conocida como los Titanes. Es un villano cósmico con habilidades sobrehumanas, incluyendo una fuerza inmensa y una longevidad prácticamente infinita. Thanos es conocido por su búsqueda del poder absoluto y su obsesión con el equilibrio del universo, que lo llevó a recolectar las Gemas del Infinito para obtener un poder ilimitado."
+			"isAlien": false,
+			"heightInMeters": 1.9,
+			"description": "Scott Summers, conocido como Cyclops, es uno de los miembros fundadores de los X-Men y su líder de campo. Tiene la habilidad de disparar poderosos rayos de energía óptica desde sus ojos, que controla a través de un visor de cuarzo rubí. Cyclops es un estratega brillante y un líder nato, dedicado a proteger tanto a los mutantes como a la humanidad en su lucha por la coexistencia pacífica."
 		},
 		{
 			"id": "marvel-hulk",

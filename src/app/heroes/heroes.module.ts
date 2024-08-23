@@ -7,6 +7,8 @@ import { ListPageComponent } from './pages/list-page/list-page.component';
 import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CommonModule } from '@angular/common';
+import { HeroCardComponent } from './components/hero-card/hero-card.component';
+import { HeroImgRoutePipe } from './pipes/hero-img-route.pipe';
 
 @NgModule({
 	declarations: [
@@ -14,7 +16,9 @@ import { CommonModule } from '@angular/common';
 		LayoutPageComponent,
 		ListPageComponent,
 		NewPageComponent,
-		SearchPageComponent
+		SearchPageComponent,
+  HeroCardComponent,
+  HeroImgRoutePipe
 	],
 	imports: [HeroesRoutingModule, CommonModule]
 })
