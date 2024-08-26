@@ -17,8 +17,8 @@ import { HeroImgRoutePipe } from './pipes/hero-img-route.pipe';
 		ListPageComponent,
 		NewPageComponent,
 		SearchPageComponent,
-  HeroCardComponent,
-  HeroImgRoutePipe
+		HeroCardComponent,
+		HeroImgRoutePipe
 	],
 	imports: [HeroesRoutingModule, CommonModule]
 })

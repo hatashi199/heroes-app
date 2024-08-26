@@ -1,52 +1,33 @@
 <div
-	class="max-w-[350px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+	class="border shadow-sm w-full max-w-[300px] overflow-hidden rounded-md bg-heroesWhite"
 >
-	<div>
+	<div class="max-h-[450px] overflow-hidden">
 		<img
 			[src]="hero | heroImgRoute"
 			[alt]="hero.superhero"
-			class="w-full"
+			class="w-full object-cover"
 		/>
 	</div>
-	<div class="p-5">
-		<a href="#">
-			<h5
-				class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-			>
-				{{ hero.superhero }}
-			</h5>
-		</a>
-		<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+	<div class="flex flex-col gap-6 md:p-8">
+		<h3 class="text-md text-primary roboto-extrabold sm:text-lg md:text-xl">
+			{{ hero.superhero }}
+		</h3>
+		<p class="text-sm sm:text-base text-heroesGray">
 			{{ hero.description | slice : 0 : 100 }}...
 		</p>
-		<div class="flex justify-between items-center">
-			<button
-				[routerLink]="'/heroes/' + hero.id"
-				class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-			>
-				Read more
-				<svg
-					class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-					aria-hidden="true"
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 14 10"
-				>
-					<path
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M1 5h12m0 0L9 1m4 4L9 9"
-					/>
-				</svg>
-			</button>
-			<button
+		<div
+			class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
+		>
+			<a
 				[routerLink]="'/heroes/edit/' + hero.id"
-				class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+				class="inline-flex items-center justify-center rounded-[100px] bg-primary px-6 py-2 text-secondary hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
 			>
-				Editar
-			</button>
+				<i class="pi pi-edit"></i>
+				<span>Editar</span>
+			</a>
+			<a [routerLink]="'/heroes/' + hero.id"
+				><i class="pi pi-ellipsis-h"></i
+			></a>
 		</div>
 	</div>
 </div>

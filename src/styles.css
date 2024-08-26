@@ -1,5 +1,6 @@
 @import url(./app/css/Reset.css);
 @import url(./app/css/Roboto.css);
+@import 'primeicons/primeicons.css';
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +8,12 @@
 
 html,
 body {
+	@apply text-base;
 	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
-	font-weight: 400;
+}
+
+.center-box {
+	max-width: 1300px;
+	width: 100%;
+	margin: 0 auto;
 }
