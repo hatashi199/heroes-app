@@ -7,9 +7,8 @@ export interface Hero {
 	affiliation: Affiliation;
 	first_appearance: FirstAppearance;
 	isAlien: boolean;
-	heightInMeters: number;
-	description: string;
-	canTimeTravel?: boolean;
+	littleDescription: string;
+	fullDescription: string;
 }
 
 export interface Affiliation {
