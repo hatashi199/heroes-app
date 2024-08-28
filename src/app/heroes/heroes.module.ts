@@ -9,6 +9,8 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CommonModule } from '@angular/common';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import { HeroImgRoutePipe } from './pipes/hero-img-route.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
 	declarations: [
@@ -20,6 +22,11 @@ import { HeroImgRoutePipe } from './pipes/hero-img-route.pipe';
 		HeroCardComponent,
 		HeroImgRoutePipe
 	],
-	imports: [HeroesRoutingModule, CommonModule]
+	imports: [
+		HeroesRoutingModule,
+		CommonModule,
+		ReactiveFormsModule,
+		SharedModule
+	]
 })
 export class HeroesModule {}

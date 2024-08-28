@@ -1,1 +1,24 @@
-<p>search-page works!</p>
+<section class="bg-heroesGray p-4">
+	<div class="center-box">
+		<label class="relative flex flex-col block roboto-medium">
+			<span class="text-heroes-500 text-primary mb-2">Buscador</span>
+			<input
+				type="text"
+				placeholder="Buscador de héroes"
+				[formControl]="searchInput"
+				(input)="searchHero()"
+				class="block w-full rounded-md border-0 py-1.5 pl-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-heroes-500 sm:text-sm"
+			/>
+			<shared-dropdown-autocomplete
+				*ngIf="searchInput.value?.length > 0"
+				[querySearch]="searchInput.value"
+				[heroesSuggested]="heroes"
+				(onOptionSelected)="heroOptionSelected($event)"
+			></shared-dropdown-autocomplete>
+		</label>
+	</div>
+	<heroes-hero-card
+		*ngIf="heroSelected"
+		[hero]="heroSelected"
+	></heroes-hero-card>
+</section>

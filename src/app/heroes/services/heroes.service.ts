@@ -19,4 +19,10 @@ export class HeroesService {
 			.get<Hero>(`${this.backendUrl}/heroes/${id}`)
 			.pipe(catchError((error) => of(undefined)));
 	}
+
+	getSuggestions(query: string): Observable<Hero[]> {
+		return this.httpClient.get<Hero[]>(
+			`${this.backendUrl}/heroes?q=${query}`
+		);
+	}
 }
