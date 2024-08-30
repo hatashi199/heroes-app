@@ -2,7 +2,7 @@
 
 <section
 	*ngIf="hero; else loader"
-	class="grid grid-cols-1 md:grid-cols-[350px_1fr] items-center gap-4 p-4 center-box"
+	class="grid grid-cols-1 md:grid-cols-[350px_1fr] items-center gap-4 px-4 py-12 center-box"
 >
 	<div
 		class="relative max-h-[500px] max-w-[300px] overflow-hidden bg-heroesWhite p-2 rounded-md"
@@ -23,10 +23,10 @@
 		class="flex flex-col items-center gap-4 md:items-start bg-heroesWhite p-4 rounded-md"
 	>
 		<div class="flex flex-col gap-1">
-			<h3 class="text-lg text-primary roboto-extrabold">
+			<h3 class="text-lg text-primary inter-extrabold">
 				{{ hero.superhero }}
 			</h3>
-			<h4 class="text-primary/80 roboto-medium">
+			<h4 class="text-primary/80 inter-medium">
 				{{ hero.alter_ego }}
 			</h4>
 		</div>

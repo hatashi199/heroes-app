@@ -1,5 +1,5 @@
 @import url(./app/css/Reset.css);
-@import url(./app/css/Roboto.css);
+@import url(./app/css/inter-font.css);
 @import 'primeicons/primeicons.css';
 
 @tailwind base;
@@ -9,7 +9,9 @@
 html,
 body {
 	@apply text-base;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Inter', sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 .center-box {

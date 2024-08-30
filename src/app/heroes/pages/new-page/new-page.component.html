@@ -1,1 +1,225 @@
-<p>new-page works!</p>
+<section class="bg-heroesGray">
+	<div class="center-box px-4 py-12">
+		<div
+			class="px-4 py-8 flex flex-col gap-8 bg-heroesWhite rounded-md shadow mx-auto max-w-xl"
+		>
+			<h2
+				class="text-xl inter-bold text-primary text-center sm:text-start"
+			>
+				Añadir un héroe
+			</h2>
+			<form
+				action="#"
+				[formGroup]="heroForm"
+				(submit)="onSubmitHero()"
+			>
+				<div class="grid gap-4 sm:grid-cols-2">
+					<div class="flex flex-col gap-2">
+						<label
+							for="heroName"
+							class="block text-sm inter-medium text-primary"
+							>Nombre del héroe/ína</label
+						>
+						<input
+							type="text"
+							name="heroName"
+							id="heroName"
+							class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+							placeholder="Escriba el nombre del héroe/ína"
+							formControlName="superhero"
+							required
+						/>
+					</div>
+					<div class="flex flex-col gap-2">
+						<label
+							for="alterEgo"
+							class="block text-sm inter-medium text-primary"
+							>Alter-ego del héroe/ína</label
+						>
+						<input
+							type="text"
+							name="alterEgo"
+							id="alterEgo"
+							class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+							placeholder="Escriba el alter-ego del héroe/ína"
+							formControlName="alter_ego"
+							required
+						/>
+					</div>
+					<div class="flex flex-col gap-2 sm:col-span-2">
+						<label
+							for="powers"
+							class="block text-sm inter-medium text-primary"
+							>Poderes del héroe/ína</label
+						>
+						<input
+							type="text"
+							name="powers"
+							id="powers"
+							class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+							placeholder="Escriba los poderes del héroe/ína separados por coma"
+							formControlName="powers"
+						/>
+					</div>
+					<div
+						class="grid sm:grid-cols-2 gap-4 sm:col-span-2"
+						formGroupName="affiliation"
+					>
+						<div class="flex flex-col gap-2">
+							<label
+								for="affiliationTeam"
+								class="block text-sm inter-medium text-primary"
+								>Afiliación - Equipo</label
+							>
+							<input
+								type="text"
+								name="affiliationTeam"
+								id="affiliationTeam"
+								class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+								placeholder="Equipo del heroe/ína"
+								formControlName="team"
+							/>
+						</div>
+						<div class="flex flex-col gap-2">
+							<label
+								for="affiliationRole"
+								class="block text-sm inter-medium text-primary"
+								>Afiliación - Rol</label
+							>
+							<input
+								type="text"
+								name="affiliationRole"
+								id="affiliationRole"
+								class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+								placeholder="Rol del heroe/ína"
+								formControlName="role"
+							/>
+						</div>
+					</div>
+					<div
+						class="grid sm:grid-cols-2 gap-4 sm:col-span-2"
+						formGroupName="first_appearance"
+					>
+						<div class="flex flex-col gap-2">
+							<label
+								for="appearanceComic"
+								class="block text-sm inter-medium text-primary"
+								>1ª Aparición - Cómic</label
+							>
+							<input
+								type="text"
+								name="appearanceComic"
+								id="appearanceComic"
+								class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+								placeholder="Cómic"
+								formControlName="comic"
+								required
+							/>
+						</div>
+						<div class="flex flex-col gap-2">
+							<label
+								for="appearanceYear"
+								class="block text-sm inter-medium text-primary"
+								>1ª Aparición - Año</label
+							>
+							<input
+								type="number"
+								name="appearanceYear"
+								id="appearanceYear"
+								class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+								placeholder="2024"
+								formControlName="year"
+								required
+							/>
+						</div>
+					</div>
+					<div class="flex flex-col gap-2">
+						<label
+							for="publisher"
+							class="block text-sm inter-medium text-primary"
+							>Creador</label
+						>
+						<select
+							id="publisher"
+							class="bg-primary/90 cursor-pointer border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+							formControlName="publisher"
+							required
+						>
+							<option
+								selected
+								value="DC Comics"
+							>
+								DC - Comics
+							</option>
+							<option value="Marvel Comics">
+								Marvel - Comics
+							</option>
+						</select>
+					</div>
+					<div class="flex items-center gap-2">
+						<input
+							id="is-alien"
+							type="checkbox"
+							value=""
+							class="w-4 h-4 text-primary bg-heroesGray border-heroesGay rounded-md focus:ring-blue-500 focus:ring-2"
+							formControlName="isAlien"
+						/>
+						<label
+							for="is-alien"
+							class="text-sm inter-medium text-primary"
+							>Es Alienígena</label
+						>
+					</div>
+					<div class="flex flex-col gap-2 sm:col-span-2">
+						<label
+							class="text-sm inter-medium text-primary"
+							for="file_input"
+							>Imagen del héroe/ína</label
+						>
+						<input
+							class="block w-full p-2.5 text-sm text-secondary border border-primary rounded-md cursor-pointer bg-primary/90 focus:outline-none"
+							id="file_input"
+							type="file"
+						/>
+					</div>
+					<div class="sm:col-span-2">
+						<label
+							for="littleDescription"
+							class="text-sm inter-medium text-primary"
+							>Pequeña Description</label
+						>
+						<textarea
+							id="littleDescription"
+							rows="4"
+							class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+							placeholder="Escriba una pequeña descripción..."
+							formControlName="littleDescription"
+							required
+						></textarea>
+					</div>
+					<div class="sm:col-span-2">
+						<label
+							for="description"
+							class="text-sm inter-medium text-primary"
+							>Description</label
+						>
+						<textarea
+							id="description"
+							rows="8"
+							class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
+							placeholder="Describa al héroe/ína..."
+							formControlName="fullDescription"
+							required
+						></textarea>
+					</div>
+				</div>
+				<button
+					type="submit"
+					class="flex w-full justify-center rounded-md bg-primary mt-8 px-3 py-1.5 text-sm inter-medium leading-6 text-secondary shadow hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+				>
+					Añadir
+				</button>
+			</form>
+		</div>
+	</div>
+</section>

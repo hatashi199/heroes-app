@@ -13,13 +13,7 @@ export interface Hero {
 
 export interface Affiliation {
 	team: string;
-	role: Role;
-}
-
-export enum Role {
-	Hero = 'Hero',
-	Leader = 'Leader',
-	Member = 'Member'
+	role: string;
 }
 
 export interface FirstAppearance {
