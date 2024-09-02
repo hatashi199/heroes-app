@@ -1,0 +1,33 @@
+<div
+	class="fixed bottom-2 horizontal-center w-full max-w-xs p-4 mb-4 text-primary bg-heroesWhite rounded-md shadow"
+	[ngClass]="{
+		hidden: !isOpen,
+		'flex items-center': isOpen
+	}"
+>
+	<div
+		class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-md"
+		[ngClass]="{
+			'text-green-500 bg-green-100': snackType === 'success',
+			'text-yellow-500 bg-yellow-100': snackType === 'warning',
+			'text-red-500 bg-red-100': snackType === 'error'
+		}"
+	>
+		<i
+			class="pi"
+			[ngClass]="{
+				'pi-check': snackType === 'success',
+				'pi-exclamation-circle': snackType === 'warning',
+				'pi-times': snackType === 'error'
+			}"
+		></i>
+	</div>
+	<span class="ml-3 text-sm">{{ message || 'Message necesary' }}</span>
+	<button
+		type="button"
+		class="ml-auto -mx-1.5 -my-1.5 bg-white text-primary hover:text-primary/80 hover:bg-heroesGray rounded-md p-1.5 hover:bg-heroesWhite inline-flex items-center justify-center h-8 w-8"
+		(click)="closeSnackbar()"
+	>
+		<i class="pi pi-times"></i>
+	</button>
+</div>

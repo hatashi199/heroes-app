@@ -4,6 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Hero, Publisher } from '../../interfaces/hero.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
+import { SnackbarService } from '../../../shared/services/snackbar.service';
 
 @Component({
 	selector: 'heroes-new-page',
@@ -32,7 +33,8 @@ export class NewPageComponent implements OnInit {
 	constructor(
 		private heroesService: HeroesService,
 		private activateRoute: ActivatedRoute,
-		private router: Router
+		private router: Router,
+		private snackbarService: SnackbarService
 	) {}
 
 	ngOnInit(): void {
@@ -53,12 +55,24 @@ export class NewPageComponent implements OnInit {
 	}
 
 	onSubmitHero(): void {
-		if (this.heroForm.invalid) return;
+		if (this.heroForm.invalid) {
+			this.snackbarService.showSnackbar(
+				'Datos del formulario inválidos',
+				'error'
+			);
+
+			return;
+		}
 
 		if (this.currentHero.id) {
 			this.heroesService
 				.updateHero(this.currentHero)
-				.subscribe((hero) => console.log(hero));
+				.subscribe((hero) =>
+					this.snackbarService.showSnackbar(
+						`Héroe ${hero.superhero} actualizado`,
+						'success'
+					)
+				);
 
 			return;
 		}
@@ -74,6 +88,11 @@ export class NewPageComponent implements OnInit {
 		//TODO: Corregir powers
 		this.heroesService
 			.addHero({ ...this.currentHero })
-			.subscribe((hero) => console.log(hero));
+			.subscribe((hero) =>
+				this.snackbarService.showSnackbar(
+					`Héroe ${hero.superhero} creado`,
+					'success'
+				)
+			);
 	}
 }
