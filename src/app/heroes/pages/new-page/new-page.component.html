@@ -6,7 +6,11 @@
 			<h2
 				class="text-xl inter-bold text-primary text-center sm:text-start"
 			>
-				Añadir un héroe
+				{{
+					currentHero.id
+						? 'Editar un héroe/ína'
+						: 'Añadir un héroe/ína'
+				}}
 			</h2>
 			<form
 				action="#"
@@ -182,7 +186,7 @@
 							type="file"
 						/>
 					</div>
-					<div class="sm:col-span-2">
+					<div class="flex flex-col gap-2 sm:col-span-2">
 						<label
 							for="littleDescription"
 							class="text-sm inter-medium text-primary"
@@ -197,7 +201,7 @@
 							required
 						></textarea>
 					</div>
-					<div class="sm:col-span-2">
+					<div class="flex flex-col gap-2 sm:col-span-2">
 						<label
 							for="description"
 							class="text-sm inter-medium text-primary"
@@ -213,14 +217,27 @@
 						></textarea>
 					</div>
 				</div>
-				<button
-					type="submit"
-					class="flex w-full justify-center rounded-md bg-primary mt-8 px-3 py-1.5 text-sm inter-medium leading-6 text-secondary shadow hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-				>
-					Añadir
-				</button>
+				<div class="flex flex-col gap-2 sm:flex-row sm:col-span-2 mt-8">
+					<button
+						type="submit"
+						class="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm inter-medium leading-6 text-secondary shadow hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+					>
+						Añadir
+					</button>
+					<button
+						type="button"
+						(click)="showDeleteModal()"
+						*ngIf="currentHero.id"
+						class="flex w-full justify-center rounded-md bg-red-500 px-3 py-1.5 text-sm inter-medium leading-6 text-secondary shadow hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+					>
+						Borrar
+					</button>
+				</div>
 			</form>
 		</div>
 	</div>
 	<shared-snackbar></shared-snackbar>
+	<shared-confirm-dialog
+		(onUserDecision)="onConfirmDelete($event)"
+	></shared-confirm-dialog>
 </section>

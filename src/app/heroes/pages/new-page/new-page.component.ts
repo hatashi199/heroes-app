@@ -5,6 +5,7 @@ import { Hero, Publisher } from '../../interfaces/hero.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { SnackbarService } from '../../../shared/services/snackbar.service';
+import { ConfirmDialogService } from '../../../shared/services/confirm-dialog.service';
 
 @Component({
 	selector: 'heroes-new-page',
@@ -13,6 +14,7 @@ import { SnackbarService } from '../../../shared/services/snackbar.service';
 })
 export class NewPageComponent implements OnInit {
 	public heroForm = new FormGroup({
+		id: new FormControl<string>('', { nonNullable: true }),
 		superhero: new FormControl<string>('', { nonNullable: true }),
 		alter_ego: new FormControl<string>('', { nonNullable: true }),
 		publisher: new FormControl<Publisher>(Publisher.DCComics),
@@ -34,7 +36,8 @@ export class NewPageComponent implements OnInit {
 		private heroesService: HeroesService,
 		private activateRoute: ActivatedRoute,
 		private router: Router,
-		private snackbarService: SnackbarService
+		private snackbarService: SnackbarService,
+		private confirmDialogService: ConfirmDialogService
 	) {}
 
 	ngOnInit(): void {
@@ -45,13 +48,27 @@ export class NewPageComponent implements OnInit {
 			.subscribe((hero) => {
 				if (!hero) this.router.navigateByUrl('/');
 
-				this.heroForm.reset(hero);
+				this.heroForm.reset({ ...hero });
 			});
 	}
 
 	get currentHero(): Hero {
 		const hero = this.heroForm.value as Hero;
 		return hero;
+	}
+
+	onConfirmDelete(decision: boolean): void {
+		if (decision)
+			this.heroesService.deleteHero(this.currentHero.id).subscribe(() => {
+				this.router.navigateByUrl('/heroes/list');
+				return;
+			});
+
+		this.confirmDialogService.closeConfirmDialog();
+	}
+
+	showDeleteModal(): void {
+		this.confirmDialogService.showConfirmDialog();
 	}
 
 	onSubmitHero(): void {
@@ -83,16 +100,20 @@ export class NewPageComponent implements OnInit {
 			.toLowerCase()
 			.split(' ')
 			.join('');
+
 		this.currentHero.id = `${publisherId}-${superheroId}`;
-		this.currentHero.powers = this.currentHero.powers[0].split(',');
-		//TODO: Corregir powers
+		// const powerArray = this.heroForm.get('powers')!.value;
+		// console.log(powerArray);
+		// TODO: powers value
+
 		this.heroesService
 			.addHero({ ...this.currentHero })
-			.subscribe((hero) =>
+			.subscribe((hero) => {
 				this.snackbarService.showSnackbar(
 					`Héroe ${hero.superhero} creado`,
 					'success'
-				)
-			);
+				);
+				this.heroForm.reset();
+			});
 	}
 }
