@@ -8,7 +8,7 @@
 		class="relative max-h-[500px] max-w-[300px] overflow-hidden bg-heroesWhite p-2 rounded-md"
 	>
 		<img
-			[src]="hero | heroImgRoute"
+			[src]="hero.alter_img ? hero.alter_img : (hero | heroImgRoute)"
 			[alt]="hero.superhero"
 			class="w-full object-cover"
 		/>

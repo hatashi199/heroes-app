@@ -18,7 +18,7 @@ export class NewPageComponent implements OnInit {
 		superhero: new FormControl<string>('', { nonNullable: true }),
 		alter_ego: new FormControl<string>('', { nonNullable: true }),
 		publisher: new FormControl<Publisher>(Publisher.DCComics),
-		powers: new FormControl<string[]>([]),
+		powers: new FormControl<string[]>([], { nonNullable: true }),
 		affiliation: new FormGroup({
 			team: new FormControl<string>(''),
 			role: new FormControl<string>('')
@@ -29,7 +29,8 @@ export class NewPageComponent implements OnInit {
 		}),
 		isAlien: new FormControl<boolean>(false, { nonNullable: true }),
 		littleDescription: new FormControl<string>('', { nonNullable: true }),
-		fullDescription: new FormControl<string>('', { nonNullable: true })
+		fullDescription: new FormControl<string>('', { nonNullable: true }),
+		alter_img: new FormControl<string>('', { nonNullable: true })
 	});
 
 	constructor(
@@ -71,6 +72,11 @@ export class NewPageComponent implements OnInit {
 		this.confirmDialogService.showConfirmDialog();
 	}
 
+	powersChange(e: Event): void {
+		const input = e.target as HTMLInputElement;
+		this.heroForm.patchValue({ powers: input.value.split(',') });
+	}
+
 	onSubmitHero(): void {
 		if (this.heroForm.invalid) {
 			this.snackbarService.showSnackbar(
@@ -102,10 +108,6 @@ export class NewPageComponent implements OnInit {
 			.join('');
 
 		this.currentHero.id = `${publisherId}-${superheroId}`;
-		// const powerArray = this.heroForm.get('powers')!.value;
-		// console.log(powerArray);
-		// TODO: powers value
-
 		this.heroesService
 			.addHero({ ...this.currentHero })
 			.subscribe((hero) => {

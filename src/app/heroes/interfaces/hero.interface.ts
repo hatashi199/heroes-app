@@ -9,6 +9,7 @@ export interface Hero {
 	isAlien: boolean;
 	littleDescription: string;
 	fullDescription: string;
+	alter_img?: string;
 }
 
 export interface Affiliation {

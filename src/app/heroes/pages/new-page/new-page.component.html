@@ -60,6 +60,7 @@
 							type="text"
 							name="powers"
 							id="powers"
+							(input)="powersChange($event)"
 							class="bg-primary/90 border border-primary text-secondary text-sm rounded-md placeholder:text-secondary/70 focus:ring-primary focus:border-primary block w-full p-2.5"
 							placeholder="Escriba los poderes del héroe/ína separados por coma"
 							formControlName="powers"
@@ -174,17 +175,35 @@
 							>Es Alienígena</label
 						>
 					</div>
-					<div class="flex flex-col gap-2 sm:col-span-2">
+					<div class="flex flex-col gap-2">
 						<label
 							class="text-sm inter-medium text-primary"
-							for="file_input"
-							>Imagen del héroe/ína</label
+							for="url_img"
+							>URL de la imagen del héroe/ína</label
 						>
 						<input
-							class="block w-full p-2.5 text-sm text-secondary border border-primary rounded-md cursor-pointer bg-primary/90 focus:outline-none"
-							id="file_input"
-							type="file"
+							type="text"
+							id="url_img"
+							class="block w-full p-2.5 text-sm text-secondary placeholder:text-secondary/70 border border-primary rounded-md cursor-pointer bg-primary/90 focus:outline-none"
+							placeholder="URL de la imagen"
+							formControlName="alter_img"
 						/>
+					</div>
+					<div class="flex flex-col gap-2">
+						<span class="text-sm inter-medium text-primary"
+							>Preview de la imagen
+						</span>
+						<div class="w-[80px] h-[100px]">
+							<img
+								[src]="
+									currentHero.alter_img
+										? currentHero.alter_img
+										: 'assets/no-image.png'
+								"
+								alt="img_heroe"
+								class="w-full"
+							/>
+						</div>
 					</div>
 					<div class="flex flex-col gap-2 sm:col-span-2">
 						<label
@@ -222,7 +241,7 @@
 						type="submit"
 						class="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm inter-medium leading-6 text-secondary shadow hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
 					>
-						Añadir
+						{{ currentHero.id ? 'Editar' : 'Añadir' }}
 					</button>
 					<button
 						type="button"
