@@ -73,7 +73,14 @@
 			>
 				<i class="pi pi-bars"></i>
 			</button>
-			<h2 class="text-secondary">Logout</h2>
+			<div class="inline-flex items-center gap-2 text-secondary">
+				<i class="pi pi-user"></i>
+				<span>{{ getUser!.nombre }}</span>
+				<i
+					class="pi pi-sign-out cursor-pointer"
+					(click)="onLogout()"
+				></i>
+			</div>
 		</div>
 	</header>
 	<router-outlet></router-outlet>
