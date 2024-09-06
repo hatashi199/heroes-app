@@ -1,4 +1,4 @@
-<section class="bg-heroesGray px-4 py-12">
+<section class="grid grid-cols-1 gap-12 bg-heroesGray px-4 py-12">
 	<div class="center-box">
 		<label class="relative flex flex-col block inter-medium">
 			<span class="text-heroes-500 text-primary mb-2">Buscador</span>
@@ -17,8 +17,10 @@
 			></shared-dropdown-autocomplete>
 		</label>
 	</div>
-	<heroes-hero-card
-		*ngIf="heroSelected"
-		[hero]="heroSelected"
-	></heroes-hero-card>
+	<div class="mx-auto max-w-sm">
+		<heroes-hero-card
+			*ngIf="heroSelected"
+			[hero]="heroSelected"
+		></heroes-hero-card>
+	</div>
 </section>

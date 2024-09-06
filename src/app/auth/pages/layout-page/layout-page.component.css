@@ -1,5 +1,5 @@
-.auth-bg {
-	background-image: url(../../../../assets/heroR_auth_bg.jpg);
+.bg-config {
+	background-image: url('../../../../assets/heroR_auth_bg.jpg');
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: cover;
